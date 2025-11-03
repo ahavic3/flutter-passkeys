@@ -44,6 +44,7 @@ class PasskeysWeb extends PasskeysPlatform {
         request.authSelectionType,
         request.excludeCredentials,
         request.timeout,
+        request.attestation,
       ),
     );
 
@@ -63,7 +64,7 @@ class PasskeysWeb extends PasskeysPlatform {
         transports: typedResponse.response.transports,
       );
     } catch (e) {
-      final exception = _parseException(e as String);
+      final exception = _parseException(e.toString());
       throw exception;
     }
   }
@@ -89,7 +90,7 @@ class PasskeysWeb extends PasskeysPlatform {
 
       return typedResponse.toAuthenticateResponseType();
     } catch (e) {
-      final exception = _parseException(e as String);
+      final exception = _parseException(e.toString());
       throw exception;
     }
   }
