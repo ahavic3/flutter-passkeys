@@ -1,3 +1,6 @@
+## 1.2.1
+* Bumps device_info_plus and package_info_plus to version 12.2.0 and 9.0.0
+
 ## 1.2.0
 
 * Fixes a bug where conditional UI abortion on Web is considered as a PlatformAuthenticationCancellation Exception.
